@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/application.css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/js/application.js"></script>
+
+  <title>My Blog</title>
+</head>
+<body>
+  <section id="container" class="container-fluid">
+  <section id="nav_section" class="row">
+
+    <section id="logo">
+      <a href="/">myBlog</a>
+    </section>
+
+    <section id="login_box" class=".col-md-1">
+
+      <% if session[:user_id] == nil %>
+
+        <p id="logged_out">
+          <a href="/user/new">Sign Up</a>
+          <span>/</span>
+          <a href="/login">Login</a>
+        </p>
+
+      <% else %>
+
+        <p id="logged_in">
+          <a href="/user/<%=find_user.id%>"><%= find_user.username %></a>
+          <a href="/logout">logout</a>
+        </p>
+
+      <% end %>
+
+    </section>
+
+  </section>
+    <%= yield %>
+  </section>
+</body>
+</html>
