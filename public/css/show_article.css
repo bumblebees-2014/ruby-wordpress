@@ -52,6 +52,38 @@
 	margin: 0 0 20px;
 }
 
+#remove_button {
+	display: block;
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+#edit_button {
+	display: block;
+	float: left;
+}
+
+#article_date {
+	margin: 0 10px 0 0;
+}
+
+#date_author_divider {
+	margin: 0 10px 0 0;
+}
+
+#article_author {
+	margin: 0 10px 0 0;
+}
+
+.tags {
+	font-weight: bold;
+	font-size: 1.1em;
+	font-style: italic;
+}
+
+.tag_span {
+	margin: 0 7px 0 0;
+}
 
 
 

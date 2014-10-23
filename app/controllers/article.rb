@@ -44,6 +44,9 @@ end
 
 get '/article/:id' do
   @article = Article.find(params[:id])
+  puts "--------------------------------begin"
+  puts @article.tags
+  puts "--------------------------------end"
   erb :show_article
 end
 

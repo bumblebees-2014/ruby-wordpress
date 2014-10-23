@@ -15,9 +15,17 @@ end
 tags = []
 10.times { tags << Tag.create(name: Faker::Lorem.word) }
 
-20.times do
-	ArticleTag.create(article_id: rand(1..20), tag_id: rand(1..10))
+# 20.times do
+# 	ArticleTag.create(article_id: rand(1..20), tag_id: rand(1..10))
+# end
+
+5.times do
+	nums = (1..20).to_a
+	nums.each do |number|
+		ArticleTag.create(article_id: number, tag_id: rand(1..10))
+	end
 end
+
 
 
 
