@@ -22,6 +22,7 @@
 	margin: auto;
 	margin-top: 20px;
 	background: #ECF0F1;
+	font-family: 'Myriad Pro';
 }
 
 .tool_bar_icons {
@@ -29,6 +30,7 @@
 	display: block;
 	margin: auto;
 	margin-top: 10px;
+	font-family: 'Myriad Pro';
 }
 
 .thumbnails {
@@ -40,6 +42,28 @@
 .comments {
 	float: right;
 }
+
+#load_more {
+	display: block;
+	margin: auto;
+}
+
+#page_bottom {
+	display: block;
+	clear: both;
+	margin: 25px 0 0;
+	padding: 25px 0 0;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -41,7 +41,7 @@
 				<div class="form-group form_div">
 					<input class="comment_form form-control" name="comment_text" type="text" <%unless logged_in?%> disabled value="login to comment" <%end%>>
 				</div>
-				<input class="btn btn-info" type="submit" value="submit">
+				<input class="btn btn-info comment_submit" type="submit" value="submit">
 			</form>
 		</section>
 	</section>
@@ -50,12 +50,14 @@
 		<section class="user_comment_section">
 			<ul class="comment_list">
 				<% @article.comments.each do |comment| %>
-				<p><%= comment.comment %></p>
+				<p><span class="commenter"><a href="/user/<%=comment.user.id%>"><%= comment.user.username %>:</a></span><span><%= comment.comment %></span></p>
 				<% end %>
 			</ul>
 		</section>
 	</section>
 </section>
+
+
 
 
 

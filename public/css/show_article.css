@@ -43,13 +43,14 @@
 .user_comment_section {
 	width: 98.5%;
 	display: block;
-	margin: auto;
+	/*margin: auto;*/
 	margin-top: 25px;
 	border-radius: 3px;
 }
 
 .comment_list {
 	margin: 0 0 20px;
+	padding: 0 0 0 25px;
 }
 
 #remove_button {
@@ -85,8 +86,20 @@
 	margin: 0 7px 0 0;
 }
 
+.commenter {
+	font-weight: bold;
+	font-style: italic;
+	margin: 0 10px 0 0;
+}
 
+.commenter a {
+	color: #7F8C8D;
+}
 
+.comment_submit {
+	background: #7F8C8D;
+	border: 1px solid #7F8C8D;
+} 
 
 
 

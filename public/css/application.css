@@ -1,3 +1,7 @@
+body {
+	font-family: 'Myriad Pro';
+}
+
 #start{
 	text-align: center;
 	margin-top: 40%;
@@ -13,14 +17,15 @@
 
 nav {
 	height: 75px;
-	background: #95A5A6;
+	background: #93B1C6;
+	border-bottom: 1px solid #558188;
 	color: white;
 }
 
 #login_box {
 	display: block;
 	float: right;
-	margin: 4px 10px 0;
+	margin: 25px 25px 0;
 }
 
 #login_box span {
@@ -42,15 +47,21 @@ nav {
 }
 
 #logo {
+	height: 75px;
+	width: 95px;
 	display: block;
 	float: left;
-	margin: 4px 0 0 10px;
+	/*background: #34495E;*/
+}
+
+#logo_container {
+	margin: 23px 25px;
 }
 
 #logo a {
 	font-family: 'Myriad Pro';
 	color: white;
-	font-size: 1.2em;
+	font-size: 1.3em;
 }
 
 #login_box a {
@@ -69,8 +80,8 @@ nav {
 }
 
 ul#nav_bar {
-	padding-left: 20px;
-	margin: 8px 0 0 0;
+	padding-left: 0;
+	margin: 28px 0 0 0;
 	display: inline;
 	float: left;
 }
@@ -89,8 +100,8 @@ nav li a {
 }
 
 nav li a:hover {
-	text-decoration: none;
-	color: #333;
+	text-decoration: underline;
+	color: white;
 }
 
 .page_title {

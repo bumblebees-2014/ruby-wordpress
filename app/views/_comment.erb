@@ -1,1 +1,1 @@
-<p><%= @comment.comment %></p>
+<p><span class="commenter"><a href="/user/<%=@comment.user.id%>"><%= @comment.user.username %>:</a></span><span><%= @comment.comment %></span></p>
