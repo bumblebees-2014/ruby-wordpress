@@ -1,7 +1,20 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
-
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+	$('#add_comment').submit(function(event) {
+		event.preventDefault()
+		var url = $(this).attr("action");
+		var commentContent = $(this).serialize();
+		$(this)[0].reset();
+		console.log(url)
+		console.log(commentContent)
+		$.ajax({
+			type: "POST",
+			url: url,
+			data: commentContent
+		})
+		.done(function(response) {
+			console.log("reached here")
+			console.log(response)
+			$('.comment_list').prepend(response);
+		});
+	});
 });

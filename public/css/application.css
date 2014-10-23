@@ -11,8 +11,8 @@
 	/*border: 2px solid black;*/
 }
 
-#nav_section {
-	height: 30px;
+nav {
+	height: 75px;
 	background: #95A5A6;
 	color: white;
 }
@@ -59,6 +59,38 @@
 	color: white;
 	font-weight: bold;
 	margin: 0 0 0 10px;
+}
+
+#nav_section {
+	display: block;
+	font-family: 'Myriad Pro';
+	float: left;
+	font-size: .9em;
+}
+
+ul#nav_bar {
+	padding-left: 20px;
+	margin: 8px 0 0 0;
+	display: inline;
+	float: left;
+}
+
+nav li {
+	display: block;
+	float: left;
+}
+
+nav li a {
+	text-decoration: none;
+	color: white;
+	font-family: 'Myriad Pro';
+	margin: 0 10px 0 10px;
+	font-size: 1.1em;
+}
+
+nav li a:hover {
+	text-decoration: none;
+	color: #333;
 }
 
 .page_title {

@@ -7,7 +7,7 @@ end
 post '/user/create' do
 	@user = User.create(params[:user])
 	session[:user_id] = @user.id
-	redirect '/inbox'
+	redirect '/'
 end
 
 
@@ -32,13 +32,14 @@ post '/login' do
 	if @user
 		session[:user_id] = @user.id
 		session[:error] = nil
-		redirect '/inbox'
-
+		redirect '/'
 	else
 		session[:error] = "username/password is incorrect"
 		redirect '/'
 	end
 end
+
+
 
 # ================= LOGOUT =====================
 
@@ -49,9 +50,35 @@ end
 
 
 
+# ================= UPDATE =====================
+
+get '/user/:id/edit' do |id|
+	@user = User.find(id)
+	erb :edit_user
+end
+
+patch '/user/:id' do |id|
+	user = session[:user_id]
+	user.update!(params[:user]) #<-------------remove '!' from update after testing
+	redirect '/'
+end
 
 
 
+#=================DESTROY USER ===================
+
+delete '/user/:id' do |id|
+  User.find(id).destroy
+  redirect '/'
+end
+
+
+
+# ================== USER PROFILE =======================
+
+get '/user/:id' do
+	erb :profile
+end
 
 
 

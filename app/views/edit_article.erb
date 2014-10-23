@@ -1,0 +1,21 @@
+<section class="center_section">
+	<section class="post_section">
+
+		<form id="add_article_form" action="/article/<%=@article.id%>" method="post">
+			<input type="hidden" name="_method" value="patch">
+			<div class="form-group">
+				<input class="comment_form form-control" name="title" value="<%=@article.title%>"<%unless logged_in?%> disabled value="login to post" <%end%>>
+			</div>
+			<div class="form-group">
+				<input class="comment_form form-control" name="content" value="<%=@article.content%>"<%unless logged_in?%> disabled value="login to post" <%end%>>
+			</div>
+			<div class="form-group">
+				<input class="comment_form form-control" name="image_url" value="<%=@article.image_url%>"<%unless logged_in?%> disabled value="login to post" <%end%>>
+			</div>
+			<div class="form-group">
+				<input class="btn btn-info" type="submit" value="submit">
+			</div>
+		</form>
+
+	</section>
+</section>

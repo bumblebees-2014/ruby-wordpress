@@ -1,0 +1,50 @@
+/*#main_image_section {
+	width: 640px;
+	display: block;
+	margin: auto;
+}*/
+
+.thumbnail_outer_sections {
+	width: 23%;
+	height: 250px;
+	display: block;
+	float: left;
+	margin: 30px 0 0 20px;
+	/*background: #ECF0F1;*/
+	background: rgba(0,0,0,.03);
+	border: 1px solid rgba(0,0,0,.05);
+	border-radius: 4px;
+}
+
+.thumbnail_inner_sections {
+	width: 80%;
+	display: block;
+	margin: auto;
+	margin-top: 20px;
+	background: #ECF0F1;
+}
+
+.tool_bar_icons {
+	width: 80%;
+	display: block;
+	margin: auto;
+	margin-top: 10px;
+}
+
+.thumbnails {
+	width: 100%;
+	display: block;
+	margin: auto;
+}
+
+.comments {
+	float: right;
+}
+
+
+
+
+
+
+
+

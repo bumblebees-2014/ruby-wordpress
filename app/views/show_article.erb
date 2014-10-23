@@ -1,0 +1,53 @@
+
+<section class="center_section">
+	<section class="post_section">
+
+		<section class="left_section">
+			<img class="img-thumbnail" src="<%= @article.image_url %>" width="700">
+		</section>
+
+		<section class="right_section">
+			<h2 class="post_title">
+				<%= @article.title %>
+			</h2>
+			<section class="post_content">
+				<p><%= @article.created_at %></p>
+				<p><%= @article.content %></p>
+				<p><%= @article.user_id %></p>
+				<form action="/article/<%= @article.id %>" method="post">
+					<input type="hidden" name="_method" value="delete">
+					<input type="submit" value="Remove" class="btn btn-default">
+				</form>
+				<form action="/article/<%= @article.id %>/edit" method="get">
+					<input type="submit" value="Edit" class="btn btn-default">
+				</form>
+			</section>
+		</section>
+
+		<section class="comment_form_section">
+			<form role="form" id="add_comment" action="/comment/<%=@article.id%>" method="post">
+				<div class="form-group form_div">
+					<input class="comment_form form-control" name="comment_text" type="text" <%unless logged_in?%> disabled value="login to comment" <%end%>>
+				</div>
+				<input class="btn btn-info" type="submit" value="submit">
+			</form>
+		</section>
+	</section>
+
+	<section class="post_section">
+		<section class="user_comment_section">
+			<ul class="comment_list">
+				<% @article.comments.each do |comment| %>
+				<p><%= comment.comment %></p>
+				<% end %>
+			</ul>
+		</section>
+	</section>
+</section>
+
+
+
+
+
+
+
